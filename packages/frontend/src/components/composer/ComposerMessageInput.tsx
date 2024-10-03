@@ -216,7 +216,7 @@ export default class ComposerMessageInput extends React.Component<
   render() {
     return (
       <I18nContext.Consumer>
-        {({ writing_direction }) => (
+        {({ writingDirection }) => (
           <textarea
             className='message-input-area'
             id='composer-textarea'
@@ -231,7 +231,7 @@ export default class ComposerMessageInput extends React.Component<
             placeholder={window.static_translate('write_message_desktop')}
             disabled={this.state.loadingDraft}
             dir={
-              writing_direction === 'rtl'
+              writingDirection === 'rtl'
                 ? 'rtl'
                 : 'auto' /* auto is based on content but defaults to ltr */
             }
