@@ -120,7 +120,7 @@ type CreateChatMainProps = {
 
 function CreateChatMain(props: CreateChatMainProps) {
   const { setViewMode, onClose } = props
-  const {tx, writingDirection} = useContext(I18nContext)
+  const { tx, writingDirection } = useContext(I18nContext)
   const { userFeedback } = useContext(ScreenContext)
   const openConfirmationDialog = useConfirmationDialog()
   const accountId = selectedAccountId()
