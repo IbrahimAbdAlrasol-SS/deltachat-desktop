@@ -12,7 +12,8 @@
     "build:runtime-impl": "pnpm esbuild --format=esm --bundle --minify --keep-names --sourcemap --outdir=./dist runtime-browser/runtime.ts",
     "build:compose-frontend": "node ../../bin/copy.js ../frontend/html-dist ./dist && node ../../bin/copy.js ./static ./dist && pnpm build:runtime-impl",
     "start": "pnpm run build && node dist/server.js",
-    "start:server": "node dist/server.js"
+    "start:server": "node dist/server.js",
+    "start:browser": "node dist/browser.js"
   },
   "dependencies": {
     "@deltachat-desktop/runtime-interface": "link:../runtime",
